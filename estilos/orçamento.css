@@ -1,0 +1,45 @@
+/* Estilo para a barra lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 73px;
+    left: 0;
+    background-color: #525252;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* Estilo para o conteúdo principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Estilo para o botão de abrir/fechar a barra lateral */
+#openBtn {
+    position: fixed;
+    left: 10px;
+    top: 90px;
+    z-index: 2;
+}
+
+/* Estilos CSS para os botões */
+.menu-button {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo adicional para os botões de menu */
+.menu-button i {
+    margin-right: 10px;
+}

@@ -17,7 +17,7 @@ body{
     background-color: #ffffff;
 }
 
-.popcorn-nav {
+.nav {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -26,11 +26,11 @@ body{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.popcorn-nav a {
+.nav a {
     text-decoration: none;
 }
 
-.popcorn-nav h1 {
+.nav h1 {
     color:  #ffbb00; 
     font-family: 'MADNESS_HYPERACTIVE';
     font-weight: normal;
@@ -39,7 +39,7 @@ body{
     margin: 0; 
 }
 
-.popcorn-nav h1:hover {
+.nav h1:hover {
     color:  #a57e00; 
 }
 
@@ -87,7 +87,7 @@ body{
 
 
 @media screen and (max-width: 768px) { 
-    .pocorn-nav h1{
+    .-nav h1{
         font-size: 2rem;
     }
 
