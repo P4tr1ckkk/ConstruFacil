@@ -28,20 +28,77 @@
     </header>
 
     <!--a botão da barra lateral-->
-    <button id="openBtn" class="menu-button"><i class="fas fa-bars"></i></button>
+    <button id="openBtn" class="menu-button"><i class="fas fa-bars"> </i> </button>
+    <!--a Futuramente, adcionar blocos de tijolos quando a barra abrir, e transforma-la em um botão p/ fechar)-->
 
     <!--a barra lateral-->
-    <div class="sidebar" id="mySidebar" style="width: 60px;">
+    <div class="sidebar" id="mySidebar">
 
-        <h2>Barra Lateral</h2>
-        <p>Conteúdo da barra lateral aqui.</p>
+        <div class="search">  
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Pesquisar">
+        </div>
+
+        <div class="bloco">
+            <img class="imagem_bloco" src="./assets/brick.png" alt="imagem_bloco">
+            <div class="card_blocos">
+                Blocos
+            </div>
+        </div>
+
+        <div class="areia_e_pedra">
+            <img class="imagem_areia" src="./assets/sand.png" alt="imagem_areia">
+            <div class="card_areia">
+                Areia/pedra
+            </div>
+        </div>
+
+        <div class="cimento">
+            <img class="imagem_cimento" src="./assets/cement.png" alt="imagem_cimento">
+            <div class="card_cimento">
+                Cimento
+            </div>
+        </div>
+
+        <div class="ferragens">
+            <img class="imagem_ferragens" src="./assets/iron-bar (1).png" alt="imagem_ferragens">
+            <div class="card_ferragens">
+                ferragens
+            </div>
+        </div>
+
+        <div class="madeira">
+            <img class="imagem_madeira" src="./assets/wood.png" alt="imagem_madeira">
+            <div class="card_madeira">
+                Madeira
+            </div>
+        </div>
+
+
 
     </div>
 
-    <!--a conteúdo da barra lateral-->
+    <!--a conteúdo da página-->
     <div class="content">
-        <h1>Conteúdo Principal</h1>
-        <p>Este é o conteúdo principal da página.</p>
+        <h1>Orçamento</h1>
+
+        Blocos
+        <div class="tijolo">
+            <img src="data:image/jpeg;base64,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"
+            alt="img_tijolo">
+            <div class="card_tijolo">
+            Tijolo 6 furos (14cmA x 9cmL x 24cmC)
+            </div>
+
+            <div class="container">
+                <label for="numeroItens">Quantidade:</label>
+                <input type="number" id="numeroItens" min="0">
+                <button id="submitBtn">Add</button>
+            </div>
+            
+        </div>
+
+
     </div>
 
     <script src="scripts/orçamento.js"></script>

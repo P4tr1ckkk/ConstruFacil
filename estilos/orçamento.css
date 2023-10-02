@@ -1,21 +1,16 @@
 /* Estilo para a barra lateral */
 .sidebar {
     height: 100%;
-    width: 0;
+    width: 0%;
     position: fixed;
     z-index: 1;
-    top: 73px;
+    top: 75px;
     left: 0;
-    background-color: #525252;
+    background-color: #2855e7;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
-}
-
-/* Estilo para o conteúdo principal */
-.content {
-    margin-left: 250px;
-    padding: 20px;
+    padding-top: 70px;
+    width: 60px;
 }
 
 /* Estilo para o botão de abrir/fechar a barra lateral */
@@ -28,18 +23,243 @@
 
 /* Estilos CSS para os botões */
 .menu-button {
-    background-color: #333;
+    background-color: #2855e7;
     border: none;
     color: white;
-    padding: 10px;
+    padding: 11px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.8s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%)
+}
+
+.menu-button:hover{
+    background-color: #1a3591;
 }
 
 /* Estilo adicional para os botões de menu */
 .menu-button i {
-    margin-right: 10px;
+    font-size:27px;
+    vertical-align:top;
+    align-items: center;
 }
+
+.search {
+    margin-top: 10px;
+    display: flex;
+    width: 50%;
+    height: 5%;
+}
+
+.search i{
+    margin-top: 6px;
+    font-size: 200%;
+    color:#ffffff;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Estilo padrão do ícone sem animação */
+.fa-magnifying-glass {
+    font-size: 24px;
+}
+
+/* Estilo da animação quando o mouse estiver sobre o ícone */
+.fa-magnifying-glass:hover {
+    animation: bounce 0.5s infinite;
+}
+
+/* Definição da animação 'bounce' */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+.search input[type="text"] {
+    margin-top: 10px;;
+    margin-left: 15px;
+    width: 180px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none; /* Remove o contorno padrão ao clicar */
+}
+
+.bloco{
+    display: flex;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.imagem_bloco{
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 9px;
+}
+
+.card_blocos{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 8px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    max-width: 180px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.areia_e_pedra{
+    display: flex;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.imagem_areia{
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 9px;
+}
+
+.card_areia{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 8px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    max-width: 180px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cimento{
+    display: flex;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.imagem_cimento{
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 9px;
+}
+
+.card_cimento{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 8px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    max-width: 180px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.ferragens{
+    display: flex;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.imagem_ferragens{
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 9px;
+}
+
+.card_ferragens{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 8px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    max-width: 180px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.madeira{
+    display: flex;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.imagem_madeira{
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 9px;
+}
+
+.card_madeira{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 8px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    max-width: 180px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo para o conteúdo principal */
+.content {
+    margin-left: 60px;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.tijolo{
+    display: flex;
+}
+.tijolo img{
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.card_tijolo{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 8px;
+    background-color: #999999;
+    padding: 10px;
+    width: 500px;
+    height: 50px;
+    max-width: 500px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
