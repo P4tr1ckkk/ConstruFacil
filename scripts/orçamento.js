@@ -22,15 +22,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Obtém o elemento do ícone
-const icon = document.getElementById("searchIcon");
 
-// Adiciona um ouvinte de eventos para ativar a animação quando o mouse estiver sobre o ícone
-icon.addEventListener("mouseenter", () => {
-    icon.classList.add("fa-bounce");
-});
+ 
+// Função para adicionar um item à aba lateral direita
+function adicionarItem(item) {
+    const itensAdicionados = document.getElementById("itensAdicionados");
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    itensAdicionados.appendChild(listItem);
+}
 
-// Remove a classe de animação quando o mouse deixar o ícone
-icon.addEventListener("mouseleave", () => {
-    icon.classList.remove("fa-bounce");
-});
+// Função para adicionar um item ao orçamento
+function adicionarAoOrcamento(botao) {
+    var item = botao.parentNode.parentNode.querySelector(".card_centro").textContent;
+    var medidas = botao.parentNode.querySelector("#numeroMedidas").value;
+    var quantidade = parseInt(botao.parentNode.querySelector("input").value);
+
+    if (quantidade > 0) {
+        // Criar um novo elemento li para representar o item no orçamento
+        var novoItem = document.createElement("li");
+        novoItem.textContent = item + " - Medidas: " + medidas + ", Quantidade: " + quantidade;
+
+        // Adicionar o novo item à lista de itens do orçamento
+        var itensAdicionados = document.getElementById("itensAdicionados");
+        itensAdicionados.appendChild(novoItem);
+
+        // Limpar os campos de medidas e quantidade
+        botao.parentNode.querySelector("#numeroMedidas").value = "";
+        botao.parentNode.querySelector("input").value = "";
+    }
+}

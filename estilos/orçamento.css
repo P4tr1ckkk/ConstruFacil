@@ -1,10 +1,12 @@
+
 /* Estilo para a barra lateral */
 .sidebar {
-    height: 100%;
+    top:0px;
+    height: 1000px;
+    max-height: 1000px;
     width: 0%;
-    position: fixed;
+    position: absolute;
     z-index: 1;
-    top: 75px;
     left: 0;
     background-color: #2855e7;
     overflow-x: hidden;
@@ -15,7 +17,7 @@
 
 /* Estilo para o botão de abrir/fechar a barra lateral */
 #openBtn {
-    position: fixed;
+    position: absolute;
     left: 10px;
     top: 90px;
     z-index: 2;
@@ -48,7 +50,7 @@
 }
 
 .search {
-    margin-top: 10px;
+    margin-top: 80px;
     display: flex;
     width: 50%;
     height: 5%;
@@ -69,7 +71,7 @@
 
 /* Estilo da animação quando o mouse estiver sobre o ícone */
 .fa-magnifying-glass:hover {
-    animation: bounce 0.5s infinite;
+    animation: bounce 0.5s;
 }
 
 /* Definição da animação 'bounce' */
@@ -96,128 +98,20 @@
     outline: none; /* Remove o contorno padrão ao clicar */
 }
 
-.bloco{
+.item_sidebar{
     display: flex;
     margin-top: 10%;
     cursor: pointer;
 }
 
-.imagem_bloco{
+.icone_sidebar{
     width: 45px;
     height: 45px;
     margin-top: 15px;
     margin-left: 9px;
 }
 
-.card_blocos{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 8px;
-    background-color: #ffffff;
-    padding: 10px;
-    width: 180px;
-    height: 50px;
-    max-width: 180px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.areia_e_pedra{
-    display: flex;
-    margin-top: 10%;
-    cursor: pointer;
-}
-
-.imagem_areia{
-    width: 45px;
-    height: 45px;
-    margin-top: 15px;
-    margin-left: 9px;
-}
-
-.card_areia{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 8px;
-    background-color: #ffffff;
-    padding: 10px;
-    width: 180px;
-    height: 50px;
-    max-width: 180px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.cimento{
-    display: flex;
-    margin-top: 10%;
-    cursor: pointer;
-}
-
-.imagem_cimento{
-    width: 45px;
-    height: 45px;
-    margin-top: 15px;
-    margin-left: 9px;
-}
-
-.card_cimento{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 8px;
-    background-color: #ffffff;
-    padding: 10px;
-    width: 180px;
-    height: 50px;
-    max-width: 180px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.ferragens{
-    display: flex;
-    margin-top: 10%;
-    cursor: pointer;
-}
-
-.imagem_ferragens{
-    width: 45px;
-    height: 45px;
-    margin-top: 15px;
-    margin-left: 9px;
-}
-
-.card_ferragens{
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 8px;
-    background-color: #ffffff;
-    padding: 10px;
-    width: 180px;
-    height: 50px;
-    max-width: 180px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.madeira{
-    display: flex;
-    margin-top: 10%;
-    cursor: pointer;
-}
-
-.imagem_madeira{
-    width: 45px;
-    height: 45px;
-    margin-top: 15px;
-    margin-left: 9px;
-}
-
-.card_madeira{
+.card_esquerda{
     display: flex;
     align-items: center;
     margin-top: 10px;
@@ -238,27 +132,93 @@
     padding: 20px;
 }
 
-.tijolo{
-    display: flex;
-}
-.tijolo img{
-    margin-top: 50px;
-    width: 50px;
-    height: 50px;
+.content h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
 }
 
-.card_tijolo{
+.content h2{
+    margin-top: 20px;;
+    font-size: 50px;
+}
+
+.item_centro{
+    display: flex;
+    margin-top: -30px;
+}
+
+.img_centro{
+    margin-top: 50px;
+    width: 70px;
+    height: 70px;
+}
+
+.card_centro{
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 65px;
     margin-left: 8px;
-    background-color: #999999;
+    background-color: #ffffff;
+    border: 1px solid rgb(0, 0, 0);
     padding: 10px;
-    width: 500px;
+    width: 200px;
     height: 50px;
     max-width: 500px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+}
+
+.container {
+    margin-top: 70px;
+    margin-left: 10px;;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+/* Estilos para a aba lateral */
+.sidebar_right {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 300px; /* Largura desejada da aba lateral */
+    height: 200%; /* Altura da página */
+    background-color: #bdbdbd; /* Cor de fundo da aba lateral */
+    padding: 20px;
+    overflow-y: auto; /* Adicionar barras de rolagem se o conteúdo for longo */
+}
+
+/* Estilos para os itens do orçamento na aba lateral */
+#itensAdicionados li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #353535;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 

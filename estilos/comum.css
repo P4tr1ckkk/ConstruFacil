@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-@font-face {
-    font-family:'MADNESS_HYPERACTIVE';
-    src: url('MADNESS_HYPERACTIVE.TTF') format('truetype');
-}
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -24,6 +20,8 @@ body{
     background: #012086;
     padding: 10px 20px; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    position: relative;
 }
 
 .nav a {
@@ -32,7 +30,6 @@ body{
 
 .nav h1 {
     color:  #ffbb00; 
-    font-family: 'MADNESS_HYPERACTIVE';
     font-weight: normal;
     font-size: 3rem;
     transition: all 0.3s ease-in-out;
@@ -60,31 +57,6 @@ body{
     width: auto;
     text-decoration: none;
 }
-
-/* Estilo para o contêiner que contém a barra de rolagem */
-::-webkit-scrollbar {
-    width: 2px;    
-    height: 5px; /* Altura da barra de rolagem */
-    background-color: transparent; /* Fundo transparente para o contêiner da barra de rolagem */
-    padding: 10px;
-}
-      
-/* Estilo para o trilho (track) da barra de rolagem */
-::-webkit-scrollbar-track {
-     background-color: transparent; /* Fundo transparente para o trilho */
-}
-      
-/* Estilo para o polegar (thumb) da barra de rolagem */
-::-webkit-scrollbar-thumb {
-    background-color: #888; /* Cor do polegar */
-    border-radius: 5px; /* Borda arredondada do polegar */
-}
-      
-/* Estilo quando o usuário passa o mouse sobre a barra de rolagem */
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Cor quando o mouse está sobre ele */
-}
-
 
 @media screen and (max-width: 768px) { 
     .-nav h1{
