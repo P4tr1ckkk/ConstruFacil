@@ -23,32 +23,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
- 
-// Função para adicionar um item à aba lateral direita
-function adicionarItem(item) {
-    const itensAdicionados = document.getElementById("itensAdicionados");
-    const listItem = document.createElement("li");
-    listItem.textContent = item;
-    itensAdicionados.appendChild(listItem);
-}
-
 // Função para adicionar um item ao orçamento
 function adicionarAoOrcamento(botao) {
+    
     var item = botao.parentNode.parentNode.querySelector(".card_centro").textContent;
-    var medidas = botao.parentNode.querySelector("#numeroMedidas").value;
-    var quantidade = parseInt(botao.parentNode.querySelector("input").value);
+
+    var medidas = botao.parentNode.querySelector("#medidasTijolo").value;
+    var quantidade = botao.parentNode.querySelector("#quantidadeTijolo").value;
+
+    var medida= botao.parentNode.querySelector("#undMedida").value;
 
     if (quantidade > 0) {
         // Criar um novo elemento li para representar o item no orçamento
         var novoItem = document.createElement("li");
-        novoItem.textContent = item + " - Medidas: " + medidas + ", Quantidade: " + quantidade;
+        novoItem.textContent = item + " - Medidas: " + medidas + ", Quantidade: " + quantidade + medida;
 
         // Adicionar o novo item à lista de itens do orçamento
         var itensAdicionados = document.getElementById("itensAdicionados");
         itensAdicionados.appendChild(novoItem);
 
-        // Limpar os campos de medidas e quantidade
-        botao.parentNode.querySelector("#numeroMedidas").value = "";
-        botao.parentNode.querySelector("input").value = "";
+        // Limpar os campos de medidas e quantidade Tijolo
+        botao.parentNode.querySelector("#medidasTijolo").value = "";
+        botao.parentNode.querySelector("#quantidadeTijolo").value = "";
     }
 }

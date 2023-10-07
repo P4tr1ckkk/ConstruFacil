@@ -2,8 +2,7 @@
 /* Estilo para a barra lateral */
 .sidebar {
     top:0px;
-    height: 1000px;
-    max-height: 1000px;
+    height: 3100px;
     width: 0%;
     position: absolute;
     z-index: 1;
@@ -19,13 +18,14 @@
 #openBtn {
     position: absolute;
     left: 10px;
-    top: 90px;
+    top: 100px;
     z-index: 2;
 }
 
 /* Estilos CSS para os botões */
 .menu-button {
     background-color: #2855e7;
+    margin-top: 10px;
     border: none;
     color: white;
     padding: 11px;
@@ -50,14 +50,15 @@
 }
 
 .search {
-    margin-top: 80px;
+    margin-top: 90px;
     display: flex;
     width: 50%;
-    height: 5%;
+    height: 20px;
 }
 
 .search i{
-    margin-top: 6px;
+    margin-top: 10px;
+    bottom: 10px;
     font-size: 200%;
     color:#ffffff;
     margin-left: 15px;
@@ -107,8 +108,9 @@
 .icone_sidebar{
     width: 45px;
     height: 45px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 9px;
+    margin-bottom: -30px;
 }
 
 .card_esquerda{
@@ -139,7 +141,7 @@
 }
 
 .content h2{
-    margin-top: 20px;;
+    margin-top: 20px;
     font-size: 50px;
 }
 
@@ -170,7 +172,15 @@
 
 .container {
     margin-top: 70px;
-    margin-left: 10px;;
+    margin-left: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 10px;
 }
 
 label {
@@ -192,7 +202,6 @@ button {
 }
 
 #resultado {
-    margin-top: 20px;
     font-size: 18px;
 }
 
@@ -203,7 +212,7 @@ button {
     top: 90px;
     right: 0;
     width: 300px; /* Largura desejada da aba lateral */
-    height: 200%; /* Altura da página */
+    height: 500px; /* Altura da página */
     background-color: #bdbdbd; /* Cor de fundo da aba lateral */
     padding: 20px;
     overflow-y: auto; /* Adicionar barras de rolagem se o conteúdo for longo */
@@ -213,7 +222,7 @@ button {
 #itensAdicionados li {
     margin-left: 10px;
     margin-bottom: 10px;
-    margin-top: 10px;;
+    margin-top: 10px;
     padding: 5px;
     background-color: #fff;
     border: 1px solid #353535;
