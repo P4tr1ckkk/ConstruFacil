@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUFÁCIL - Planejamento Inicial</title>
+    <link rel="stylesheet" href="planejamento.css">
+</head>
+<body>
+    <header>
+        <h1>CONSTRUFÁCIL</h1>
+        <h2>Planejamento Inicial</h2>
+    </header>
+
+    <main>
+        <section class="box">
+            <img src="assets\construlogo.png" alt="Imagem Ilustrativa">
+            <h2>Anexe seu Projeto em PDF</h2>
+            <form action="processar_pdf.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="pdf_projeto" accept=".pdf" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 CONSTRUFÁCIL. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
