@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUFÁCIL - Planejamento Inicial</title>
+    <link rel="stylesheet" href="planejamento.css">
+</head>
+<body>
+    <header>
+        <h1 class="barra-titulo">CONSTRUFÁCIL</h1>
+        <h4 class="barra-titulo">PLANEJAMENTO INICIAL</h4>
+    </header>
+
+    <main>
+        <section class="anexo-pdf box-com-borda">
+            <p>Por favor, anexe seu projeto arquitetônico com detalhes para que seja calculado a quantidade de material necessário.</p>
+            <div class="box">
+                <h3>SELECIONE O ARQUIVO DESEJADO</h3>
+                <form action="processar_pdf.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="pdf_projeto" accept=".pdf" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="box-imagem">
+            <img src="img/construlogo.png" alt="Imagem Ilustrativa">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 CONSTRUFÁCIL. Nenhum direito reservado.</p>
+    </footer>
+</body>
+</html>
