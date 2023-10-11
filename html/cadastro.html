@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="..\estilos\comum.css">
+    <link rel="stylesheet" href="..\estilos\cadastro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/23fd127124.js" crossorigin="anonymous"></script>
+    <title>Cadastro - ConstruFácil</title>
+</head>
+
+<body>
+
+    <header class="nav">
+        <a href="index.html">
+            <h1>Construfácil</h1>
+        </a>
+
+        <!--a href="login.html">
+            <button class="login-btn">Login</button>
+        </a-->
+        <a href="">
+            <img src="https://avatars.githubusercontent.com/u/80594518?v=4" class="foto-perfil">
+        <!--a href="login.html">
+            Mudar p/ foto de perfil do usuário
+        </a-->
+        </a>
+    </header>
+
+    <main>
+        <section id="login">
+
+            <div id="formulario">
+                <a class="go-home" href="index.html">
+                    <h1 class="nome-site">Construfácil</h1>
+                </a>
+                <h1>Cadastro</h1>
+                <p></p>
+                <form action="" method="post" autocomplete="on">
+
+                    <div class="campo">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="nome" id="inome" placeholder="Nome" required maxlength="15">
+                    </div>
+                    
+                    <div class="campo">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="sobrenome" id="iSnome" placeholder="Sobrenome" required maxlength="15">
+                    </div>
+                    
+                    <div class="campo">
+                        <i class="fa-solid fa-calendar"></i>
+                        <input type="date" name="data_nascimento" id="idata_nascimento" required>
+                    </div>
+                    
+                    <div class="campo">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="iemail" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="campo">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="isenha"></label>
+                    </div>
+                    
+                    <div class="campo">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="repetir_senha" id="irepetir_senha" placeholder="Repita sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="irepetir_senha"></label>
+                    </div>
+
+                    <div class="campo">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <label for="genero">Gênero:</label>
+                        <select name="genero" id="genero" required>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <i class="fa-solid fa-globe"></i>
+                        <input type="text" name="nacionalidade" id="inacionalidade" placeholder="Nacionalidade" required>
+                    </div>
+
+                    <input type="submit" value="Cadastrar">
+                    <p class="cadastro-a">Já tem uma conta? <a href="login.html">Entre aqui</a>
+                </form>
+            </div>        
+                <div id="imagem">
+                    <!--aqui vai a imagem CSS-->
+                </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="scripts/login_script.js"></script>
+</body>
+
+</html>

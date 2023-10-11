@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="..\estilos\comum.css">
+        <link rel="stylesheet" href="..\estilos\login.css">
+        <script src="https://kit.fontawesome.com/23fd127124.js" crossorigin="anonymous"></script>
+        <title>Login - ConstruFácil</title>
+      </head>
+
+<body>
+
+    <header class="nav">
+        <a href="index.html">
+            <h1>Construfácil</h1>
+        </a>
+
+        <!--a href="login.html">
+            <button class="login-btn">Login</button>
+        </a-->
+        <a href="">
+            <img src="https://avatars.githubusercontent.com/u/80594518?v=4" class="foto-perfil">
+        <!--a href="login.html">
+            Mudar p/ foto de perfil do usuário
+        </a-->
+        </a>
+    </header>
+
+      <main>
+        <section id="login">
+            
+            <div id="formulario">
+                <a class="go-home" href="index.html">
+                    <h1 class="nome-site">Construfácil</h1>
+                </a>
+                <h1>Login</h1>
+                <p></p>
+
+                <form action="" method="post" autocomplete="on">
+
+                    <div class="campo">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" name="login" id="ilogin" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="ilogin"></label>
+                    </div>
+
+                    <div class="campo">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="isenha"></label>
+                    </div>
+
+                    <input type="submit" value="Entrar">
+                    <a href="#" class="botao">Esqueci a senha</a>
+                    <p class="cadastro-a">Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>
+                </form>
+            </div>
+
+            <div id="imagem">
+                <!--aqui vai a imagem CSS-->
+            </div>
+        </section>
+  
+    </main>
+
+    <script type="module" src="scripts/login_script.js"></script>
+</body>
+</html>
