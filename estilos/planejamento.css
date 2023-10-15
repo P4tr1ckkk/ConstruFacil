@@ -13,7 +13,6 @@ header {
     background-color: #C0C0C0;
     padding: 20px 40px;
     text-align: center;
-    border-bottom: 2px solid #000; /* Adiciona uma borda na parte inferior da barra de navegação */
 }
 
 header h1, header h4 {
@@ -24,15 +23,15 @@ header h1, header h4 {
 
 .anexo-pdf {
     border: 2px solid #ccc;
-    border-radius: 15px; /* Reduz a borda */
-    padding: 25px; /* Reduz o espaço interno */
+    border-radius: 10px; /* Reduz a borda */
+    padding: 30px; /* Reduz o espaço interno */
     max-width: 700px; /* Reduz a largura máxima */
-    margin: 220px; /* Centraliza a caixa */
-    margin-left: 78px; /* Adiciona margem à esquerda */
+    margin: 390px; /* Centraliza a caixa */
+    margin-left: 210px; /* Adiciona margem à esquerda */
 }
 
 .anexo-pdf form {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 footer {
@@ -69,9 +68,9 @@ h4 {
 
 .box-imagem {
     position: absolute;
-    top: 93px;
+    top: 92px;
     right: 0px;
-    width: 32%;
+    width: 38%;
 }
 
 .box-imagem img {
