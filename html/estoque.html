@@ -3,33 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Compras - Inventário de Materiais de Construção</title>  
-    <link rel="stylesheet" href="..\estilos\comum.css">    
-    <link rel="stylesheet" href="..\estilos\estoque.css">   
-
-   
+    <title>Sistema de Compras - Inventário de Materiais de Construção</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-
-    <header class="nav">
-        <a href="index.html">
-            <h1>Construfácil</h1>
-        </a>
-
-        <!--a href="login.html">
-            <button class="login-btn">Login</button>
-        </a-->
-        <a href="">
-            <img src="https://avatars.githubusercontent.com/u/80594518?v=4" class="foto-perfil">
-        <!--a href="login.html">
-            Mudar p/ foto de perfil do usuário
-        </a-->
-        </a>
-    </header>
-
-    <h1>Sistema de Compras - Inventário de Materiais de Construção</h1>
-
     <table id="inventoryTable">
         <thead>
             <tr>
@@ -42,10 +19,10 @@
         <tbody>
             <!-- Exemplo de dados do inventário (substitua com seus próprios dados) -->
             <tr>
-                <td>Cimento</td>
-                <td id="quantidadeCimento">1000</td>
+                <td>cimento</td>
+                <td id="quantidadecimento">1000</td>
                 <td>Sacos</td>
-                <td><button onclick="removeItem('Cimento')">Comprar</button></td>
+                <td><button onclick="removeItem('cimento')">Comprar</button></td>
             </tr>
             <tr>
                 <td>Tijolos</td>
@@ -71,79 +48,97 @@
                 <td>kg</td>
                 <td><button onclick="removeItem('ferraria')">Comprar</button></td>
             </tr>
-            <!-- Adicione mais linhas para cada material no seu inventário -->
-        </tbody>
-    </table>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <h2>Adicionar Nova Compra</h2>
-    <form onsubmit="addItem(event)">
-        <label for="material">Material:</label>
-        <input type="text" id="material" required>
-        <label for="quantidade">Quantidade:</label>
-        <input type="number" id="quantidade" required>
-        <button type="submit">Comprar</button>
-    </form>
+  <section id="filters">
+    <label for="category-filter">Filtrar por categoria:</label>
+    <select id="category-filter">
+      <option value="todos">Todos</option>
+      <option value="construcao">Construção</option>
+      <option value="eletrica">Elétrica</option>
+      <option value="hidraulica">Hidráulica</option>
+      <!-- Adicione mais categorias conforme necessário -->
+    </select>
+</tbody>
+</table>
 
-    <h2>Compras Realizadas</h2>
-    <table id="purchaseTable">
-        <thead>
-            <tr>
-                <th>Material</th>
-                <th>Quantidade</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Aqui serão exibidas as compras realizadas -->
-        </tbody>
-    </table>
+<h2>Adicionar Nova Compra</h2>
+<form onsubmit="addItem(event)">
+    <label for="material">Material:</label>
+    <input type="text" id="material" required>
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" required>
+    <button type="submit">Comprar</button>
+</form>
 
-    <script>
-        function addItem(event) {
-            event.preventDefault();
-            const material = document.getElementById('material').value;
-            const quantidade = parseInt(document.getElementById('quantidade').value);
+<h2>Compras Realizadas</h2>
+<table id="purchaseTable">
+    <thead>
+        <tr>
+            <th>Material</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aqui serão exibidas as compras realizadas -->
+    </tbody>
+</table>
 
-            if (quantidade <= 0 || isNaN(quantidade)) {
-                alert('A quantidade deve ser um número maior que zero.');
-                return;
-            }
+<script>
+    function addItem(event) {
+        event.preventDefault();
+        const material = document.getElementById('material').value;
+        const quantidade = parseInt(document.getElementById('quantidade').value);
 
-            const quantidadeElement = document.getElementById('quantidade' + material.replace(/\s+/g, ''));
-            let quantidadeAtual = parseInt(quantidadeElement.innerText);
-
-            if (quantidade <= quantidadeAtual) {
-                quantidadeAtual -= quantidade;
-                quantidadeElement.innerText = quantidadeAtual;
-                addPurchase(material, quantidade);
-            } else {
-                alert('Quantidade insuficiente em estoque.');
-            }
+        if (quantidade <= 0 || isNaN(quantidade)) {
+            alert('A quantidade deve ser um número maior que zero.');
+            return;
         }
 
-        function addPurchase(material, quantidade) {
-            const purchaseTable = document.getElementById('purchaseTable').getElementsByTagName('tbody')[0];
-            const newRow = purchaseTable.insertRow(purchaseTable.rows.length);
+        const quantidadeElement = document.getElementById('quantidade' + material.replace(/\s+/g, ''));
+        let quantidadeAtual = parseInt(quantidadeElement.innerText);
 
-            const cell1 = newRow.insertCell(0);
-            const cell2 = newRow.insertCell(1);
-
-            cell1.innerHTML = material;
-            cell2.innerHTML = quantidade;
+        if (quantidade <= quantidadeAtual) {
+            quantidadeAtual -= quantidade;
+            quantidadeElement.innerText = quantidadeAtual;
+            addPurchase(material, quantidade);
+        } else {
+            alert('Quantidade insuficiente em estoque.');
         }
+    }
 
-        function removeItem(material) {
-            const quantidadeElement = document.getElementById('quantidade' + material.replace(/\s+/g, ''));
-            let quantidadeAtual = parseInt(quantidadeElement.innerText);
-            const quantidade = parseInt(prompt('Informe a quantidade a ser comprada:', '1'));
+    function addPurchase(material, quantidade) {
+        const purchaseTable = document.getElementById('purchaseTable').getElementsByTagName('tbody')[0];
+        const newRow = purchaseTable.insertRow(purchaseTable.rows.length);
 
-            if (!isNaN(quantidade) && quantidade > 0 && quantidade <= quantidadeAtual) {
-                quantidadeAtual -= quantidade;
-                quantidadeElement.innerText = quantidadeAtual;
-                addPurchase(material, quantidade);
-            } else {
-                alert('Quantidade inválida ou excede a quantidade atual em estoque.');
-            }
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+
+        cell1.innerHTML = material;
+        cell2.innerHTML = quantidade;
+    }
+
+    function removeItem(material) {
+        const quantidadeElement = document.getElementById('quantidade' + material.replace(/\s+/g, ''));
+        let quantidadeAtual = parseInt(quantidadeElement.innerText);
+        const quantidade = parseInt(prompt('Informe a quantidade a ser comprada:', '1'));
+
+        if (!isNaN(quantidade) && quantidade > 0 && quantidade <= quantidadeAtual) {
+            quantidadeAtual -= quantidade;
+            quantidadeElement.innerText = quantidadeAtual;
+            addPurchase(material, quantidade);
+        } else {
+            alert('Quantidade inválida ou excede a quantidade atual em estoque.');
         }
-    </script>
+    }
+</script>
 </body>
 </html>
