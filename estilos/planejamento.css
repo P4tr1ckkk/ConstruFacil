@@ -26,12 +26,12 @@ header h1, header h4 {
     border-radius: 10px; /* Reduz a borda */
     padding: 30px; /* Reduz o espaço interno */
     max-width: 700px; /* Reduz a largura máxima */
-    margin: 390px; /* Centraliza a caixa */
-    margin-left: 210px; /* Adiciona margem à esquerda */
+    margin: 110px; /* Centraliza a caixa */
+    margin-left: 290px; /* Adiciona margem à esquerda */
 }
 
 .anexo-pdf form {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 footer {

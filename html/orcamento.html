@@ -27,618 +27,612 @@
         </a>
     </header>
 
-    <!--a barra lateral-->
-    <div class="sidebar" id="mySidebar">
+    <div class="body">
+        <!--a barra lateral-->
+        <div class="sidebar" id="mySidebar">
 
-    <!--a botão da barra lateral-->
-    <button id="openBtn" class="menu-button"><i class="fas fa-bars"> </i> </button>
-    <!--a Futuramente, adcionar blocos de tijolos quando a barra abrir, e transforma-la em um botão p/ fechar)-->
+        <!--a botão da barra lateral-->
+        <button id="openBtn" class="menu-button"><i class="fas fa-bars"> </i> </button>
+        <!--a Futuramente, adcionar blocos de tijolos quando a barra abrir, e transforma-la em um botão p/ fechar)-->
 
-        <div class="search">  
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Pesquisar">
+            <div class="search">  
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Pesquisar">
+            </div>
+
+            <div id="item_sidebar" class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/brick.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Blocos
+                </div>
+            </div>
+
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/sand.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Areia/pedra
+                </div>
+            </div>
+
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/cement.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Cimento
+                </div>
+            </div>
+
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/iron-bar (1).png" alt="iicone_sidebar">
+                <div class="card_esquerda">
+                    ferragens
+                </div>
+            </div>
+
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/wood.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Madeira
+                </div>
+            </div>
+
         </div>
 
-        <div id="item_sidebar" class="item_sidebar">
-            <img class="icone_sidebar" src="./assets/brick.png" alt="icone_sidebar">
-            <div class="card_esquerda">
-                Blocos
+        <!--a conteúdo da página-->
+        <div class="content">
+            <h1>Meu estoque</h1>
+
+            <h2>Blocos</h2>
+            
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Tijolo 6 furos 
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Bloco de cimento 
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Canaleta cerâmica 
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Canaleta Concreto
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <h2>Areia e pedra</h2>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Areia Fina
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Areia Média
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Areia Grossa
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Pedrisco Nº 0
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Pedrisco Nº 1
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Pedrisco Nº 2
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <h2>Ferragens</h2>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Coluna soldada
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Bitola
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Vergalhão
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Estribo
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Malhas e telas
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Arame
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Treliça
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <h2>Madeiras</h2>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Madeirite
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Madeira de Pinus
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
+            </div>
+
+            <div class="item_centro">
+
+                <div class="card_centro">
+                    Ripas de madeira
+                </div>
+
+                <form class = "container">
+
+                    <label for="medidas">Medidas:</label>
+                    <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
+
+                    <label for="quantidad">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
+
+                    <label for="undMedida">Und de Medida:</label>
+                    <select id="undMedida" name="undMedida">
+                            <option value="und">Unidades</option>
+                            <option value="kg">Quilos</option>
+                            <option value="m">Metros</option>                    
+                    </select>
+                        
+                    <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
+
+                </form>
+            
             </div>
         </div>
 
-        <div class="item_sidebar">
-            <img class="icone_sidebar" src="./assets/sand.png" alt="icone_sidebar">
-            <div class="card_esquerda">
-                Areia/pedra
-            </div>
-        </div>
-
-        <div class="item_sidebar">
-            <img class="icone_sidebar" src="./assets/cement.png" alt="icone_sidebar">
-            <div class="card_esquerda">
-                Cimento
-            </div>
-        </div>
-
-        <div class="item_sidebar">
-            <img class="icone_sidebar" src="./assets/iron-bar (1).png" alt="iicone_sidebar">
-            <div class="card_esquerda">
-                ferragens
-            </div>
-        </div>
-
-        <div class="item_sidebar">
-            <img class="icone_sidebar" src="./assets/wood.png" alt="icone_sidebar">
-            <div class="card_esquerda">
-                Madeira
-            </div>
-        </div>
+        <script src = "../scripts/orcamento.js"></script>
 
     </div>
-
-    <!--a conteúdo da página-->
-    <div class="content">
-        <h1>Orçamento</h1>
-
-        <h2>Blocos</h2>
-        
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Tijolo 6 furos 
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Bloco de cimento 
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Canaleta cerâmica 
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Canaleta Concreto
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <h2>Areia e pedra</h2>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Areia Fina
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Areia Média
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Areia Grossa
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Pedrisco Nº 0
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Pedrisco Nº 1
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Pedrisco Nº 2
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <h2>Ferragens</h2>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Coluna soldada
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Bitola
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Vergalhão
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Estribo
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Malhas e telas
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Arame
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Treliça
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <h2>Madeiras</h2>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Madeirite
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Madeira de Pinus
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-
-        <div class="item_centro">
-
-            <div class="card_centro">
-                Ripas de madeira
-            </div>
-
-            <form class = "container">
-
-                <label for="medidas">Medidas:</label>
-                <input type="text" id="medidas" name="medidas" placeholder="Digite as medidas do bloco">
-
-                <label for="quantidad">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade">
-
-                <label for="undMedida">Und de Medida:</label>
-                <select id="undMedida" name="undMedida">
-                        <option value="und">Unidades</option>
-                        <option value="kg">Quilos</option>
-                        <option value="m">Metros</option>                    
-                </select>
-                    
-                <input type="submit" value="Adicionar" onclick="adicionarAoOrcamento(this); return false;">
-
-            </form>
-        
-        </div>
-    </div>
-
-
-    <!-- A aba lateral de itens do orçamento -->
-    <div class="sidebar_right" id="mySidebarRight">
-        <h2>Itens Adicionados</h2>
-        <ul id="itensAdicionados">
-            <!-- Os itens adicionados serão exibidos aqui -->
-        </ul>
-    </div>
-
-    <script src = "scripts/orcamento.js"></script>
 </body>
 
 </html>

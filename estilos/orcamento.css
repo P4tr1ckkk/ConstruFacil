@@ -1,4 +1,8 @@
 
+.body{
+    display: flex;
+}
+
 /* Estilo para a barra lateral */
 .sidebar {
     top:0px;
