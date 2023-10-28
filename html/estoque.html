@@ -1,144 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <link rel="stylesheet" href="..\estilos\comum.css">
+    <link rel="stylesheet" href="..\estilos\estoque.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Compras - Inventário de Materiais de Construção</title>
-  <link rel="stylesheet" href="./styles.css">
+    <title>Construfacil</title>
+    <script src="https://kit.fontawesome.com/23fd127124.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <table id="inventoryTable">
-        <thead>
-            <tr>
-                <th>Material</th>
-                <th>Quantidade</th>
-                <th>Unidade</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Exemplo de dados do inventário (substitua com seus próprios dados) -->
-            <tr>
-                <td>cimento</td>
-                <td id="quantidadecimento">1000</td>
-                <td>Sacos</td>
-                <td><button onclick="removeItem('cimento')">Comprar</button></td>
-            </tr>
-            <tr>
-                <td>Tijolos</td>
-                <td id="quantidadeTijolos">5000</td>
-                <td>Peças</td>
-                <td><button onclick="removeItem('Tijolos')">Comprar</button></td>
-            </tr>
-            <tr>
-                <td>Areia</td>
-                <td id="quantidadeAreia">5000</td>
-                <td>sacos</td>
-                <td><button onclick="removeItem('Areia')">Comprar</button></td>
-            </tr>
-            <tr>
-                <td>pedrisco</td>
-                <td id="quantidadepedrisco">5000</td>
-                <td>sacos</td>
-                <td><button onclick="removeItem('pedriscos')">Comprar</button></td>
-            </tr>
-            <tr>
-                <td>ferraria</td>
-                <td id="quantidadeferraria">5000</td>
-                <td>kg</td>
-                <td><button onclick="removeItem('ferraria')">Comprar</button></td>
-            </tr>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="filters">
-    <label for="category-filter">Filtrar por categoria:</label>
-    <select id="category-filter">
-      <option value="todos">Todos</option>
-      <option value="construcao">Construção</option>
-      <option value="eletrica">Elétrica</option>
-      <option value="hidraulica">Hidráulica</option>
-      <!-- Adicione mais categorias conforme necessário -->
-    </select>
-</tbody>
-</table>
+    <header class="nav">
+        <a href="index.html">
+            <h1>Construfácil</h1>
+        </a>
 
-<h2>Adicionar Nova Compra</h2>
-<form onsubmit="addItem(event)">
-    <label for="material">Material:</label>
-    <input type="text" id="material" required>
-    <label for="quantidade">Quantidade:</label>
-    <input type="number" id="quantidade" required>
-    <button type="submit">Comprar</button>
-</form>
+        <!--a href="login.html">
+            <button class="login-btn">Login</button>
+        </a-->
+        <a href="">
+            <img src="https://avatars.githubusercontent.com/u/80594518?v=4" class="foto-perfil">
+        <!--a href="login.html">
+            Mudar p/ foto de perfil do usuário
+        </a-->
+        </a>
+    </header>
 
-<h2>Compras Realizadas</h2>
-<table id="purchaseTable">
-    <thead>
-        <tr>
-            <th>Material</th>
-            <th>Quantidade</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Aqui serão exibidas as compras realizadas -->
-    </tbody>
-</table>
+    <div class="body">
+        <!--a barra lateral-->
+        <div class="sidebar" id="mySidebar">
 
-<script>
-    function addItem(event) {
-        event.preventDefault();
-        const material = document.getElementById('material').value;
-        const quantidade = parseInt(document.getElementById('quantidade').value);
+        <!--a botão da barra lateral-->
+        <button id="openBtn" class="menu-button"><i class="fas fa-bars"> </i> </button>
+        <!--a Futuramente, adcionar blocos de tijolos quando a barra abrir, e transforma-la em um botão p/ fechar)-->
 
-        if (quantidade <= 0 || isNaN(quantidade)) {
-            alert('A quantidade deve ser um número maior que zero.');
-            return;
-        }
+            <div class="search">  
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Pesquisar">
+            </div>
 
-        const quantidadeElement = document.getElementById('quantidade' + material.replace(/\s+/g, ''));
-        let quantidadeAtual = parseInt(quantidadeElement.innerText);
+            <div id="item_sidebar" class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/brick.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Blocos
+                </div>
+            </div>
 
-        if (quantidade <= quantidadeAtual) {
-            quantidadeAtual -= quantidade;
-            quantidadeElement.innerText = quantidadeAtual;
-            addPurchase(material, quantidade);
-        } else {
-            alert('Quantidade insuficiente em estoque.');
-        }
-    }
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/sand.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Areia/pedra
+                </div>
+            </div>
 
-    function addPurchase(material, quantidade) {
-        const purchaseTable = document.getElementById('purchaseTable').getElementsByTagName('tbody')[0];
-        const newRow = purchaseTable.insertRow(purchaseTable.rows.length);
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/cement.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Cimento
+                </div>
+            </div>
 
-        const cell1 = newRow.insertCell(0);
-        const cell2 = newRow.insertCell(1);
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/iron-bar (1).png" alt="iicone_sidebar">
+                <div class="card_esquerda">
+                    ferragens
+                </div>
+            </div>
 
-        cell1.innerHTML = material;
-        cell2.innerHTML = quantidade;
-    }
+            <div class="item_sidebar">
+                <img class="icone_sidebar" src="../assets/wood.png" alt="icone_sidebar">
+                <div class="card_esquerda">
+                    Madeira
+                </div>
+            </div>
 
-    function removeItem(material) {
-        const quantidadeElement = document.getElementById('quantidade' + material.replace(/\s+/g, ''));
-        let quantidadeAtual = parseInt(quantidadeElement.innerText);
-        const quantidade = parseInt(prompt('Informe a quantidade a ser comprada:', '1'));
+        </div>
+        
+            <!--a conteúdo da página-->
+        <div class="content" id="mainContent">
 
-        if (!isNaN(quantidade) && quantidade > 0 && quantidade <= quantidadeAtual) {
-            quantidadeAtual -= quantidade;
-            quantidadeElement.innerText = quantidadeAtual;
-            addPurchase(material, quantidade);
-        } else {
-            alert('Quantidade inválida ou excede a quantidade atual em estoque.');
-        }
-    }
-</script>
+            <h2>Adicionar Item ao Estoque</h2>
+
+            <div class="form">
+                <form id="stockForm">
+                    <label for="itemName">Nome do Item:</label>
+                    <input type="text" id="itemName" required>
+
+                    <label for="itemQuantity">Quantidade:</label>
+                    <input type="number" id="itemQuantity" required>
+
+                    <label for="itemType">Tipo
+                    <select id="itemType" name="type">
+                        <option value="tijolo">Blocos</option>
+                        <option value="tijolo">Areia</option>
+                        <option value="tijolo">Pedra</option>
+                        <option value="tijolo">Cimento</option>
+                        <option value="tijolo">Ferragens</option>
+                        <option value="tijolo">Madeiras</option>
+                        <option value="tijolo">Outros</option>
+                    </select>
+
+                    </label>
+
+                    <button type="button" onclick="addItem()">Adicionar Item</button>
+                </form>
+            </div>
+        
+            <h2>Itens no Estoque</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Item</th>
+                        <th>Quantidade</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+
+                <tbody id="stockList">
+                </tbody>
+            </table>
+
+        </div>
+    
+    </div>
+
+    <script src = "../scripts/estoque.js"></script>
 </body>
+
 </html>

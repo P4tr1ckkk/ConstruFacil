@@ -8,14 +8,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Secular+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../estilos/reset.css">
-    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/obra.css">
+    <link rel="stylesheet" href="../estilos/comum.css">
     <link rel="stylesheet" href="css/form.css">
 
     <title>Formulário de cadastro</title>
 </head>
 <body>
    
+    <header class="nav">
+        <a href="index.html">
+            <h1>Construfácil</h1>
+        </a>
+
+        <!--a href="login.html">
+            <button class="login-btn">Login</button>
+        </a-->
+        <a href="">
+            <img src="https://avatars.githubusercontent.com/u/80594518?v=4" class="foto-perfil">
+        <!--a href="login.html">
+            Mudar p/ foto de perfil do usuário
+        </a-->
+        </a>
+    </header>
+
     <div class="form">
         <form action="#">
            
@@ -61,7 +77,7 @@
 
            <div class="end-input">
             <div class="end-title">
-                <h2>Endereço da Obra</h2> 
+                <h1>Endereço da Obra</h1> 
             </div> 
             
             <label for="Uf">Estado</label>
@@ -123,8 +139,22 @@
 
            </div>
 
-           
-
+           <div class="gustavo">
+                <section class="anexo-pdf box-com-borda">
+                    <p>Por favor, anexe seu projeto arquitetônico em PDF com detalhes para que seja calculado a quantidade de material necessário.</p>
+                    <div class="box">
+                        <h3>SELECIONE O ARQUIVO DESEJADO</h3>
+                        <form action="processar_pdf.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="pdf_projeto" accept=".pdf" required>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </section>
+        
+                <section class="box-imagem">
+                    <!--<img src="../assets/construlogo.png" alt="Imagem Ilustrativa">-->
+                </section>
+           </div>
 
             <div class="continue-button">
                 <button><a href="#">Cadastrar</a></button>

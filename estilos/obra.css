@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:  secular one;
+
+
+ul{
+    list-style: none;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 
 body {
     width: 100%;
-    height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: darkgray;
@@ -132,7 +132,7 @@ body {
 
 
 .end-title h2{
-    font-size: 2rem;
+    font-size: 2rem;    
     font-weight: 600;
 }
 
@@ -171,4 +171,38 @@ body {
         flex-wrap: nowrap;
     }
    
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+header {
+    background-color: #C0C0C0;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+header h1, header h4 {
+    color: #000000; /* Corrigi a cor do texto */
+    display: block;
+    margin-bottom: 20px;
+}
+
+.anexo-pdf {
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Reduz a borda */
+    padding: 30px; /* Reduz o espaço interno */
+    max-width: 700px; /* Reduz a largura máxima */
+    margin: 50px; /* Centraliza a caixa */
+    margin-left: 150px; /* Adiciona margem à esquerda */
+}
+
+.anexo-pdf form {
+    margin-top: 20px;
 }
