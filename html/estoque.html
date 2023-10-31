@@ -76,56 +76,114 @@
             </div>
 
         </div>
+
+        <!--a
+        <div class="calculator-icon" id="calculatorIcon">Calcular</div>
+        <div class="calculator" id="calculator">
+            <div class="calculator-header">
+                <h3>Calculadora</h3>
+                <span id="closeCalculator">Fechar</span>
+            </div>
+            <div class="calculadora">
+                <h1>Calculadora</h1>
+                <p id="resultado"></p>
+                <table>
+                    <tr>
+                        <td><button class="botao" onclick="clean()">C</button></td>
+                        <td><button class="botao" onclick="back()"></button></td>
+                        <td><button class="botao" onclick="insert('/')">/</button></td>
+                        <td><button class="botao" onclick="insert('*')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('7')">7</button></td>
+                        <td><button class="botao" onclick="insert('8')">8</button></td>
+                        <td><button class="botao" onclick="insert('9')">9</button></td>
+                        <td><button class="botao" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('4')">4</button></td>
+                        <td><button class="botao" onclick="insert('5')">5</button></td>
+                        <td><button class="botao" onclick="insert('6')">6</button></td>
+                        <td><button class="botao" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('1')">1</button></td>
+                        <td><button class="botao" onclick="insert('2')">2</button></td>
+                        <td><button class="botao" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+                        <td><button class="botao" onclick="insert('.')">.</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        -->
         
             <!--a conteúdo da página-->
         <div class="content" id="mainContent">
 
-            <h2>Adicionar Item ao Estoque</h2>
-
             <div class="form">
-                <form id="stockForm">
-                    <label for="itemName">Nome do Item:</label>
-                    <input type="text" id="itemName" required>
 
-                    <label for="itemQuantity">Quantidade:</label>
-                    <input type="number" id="itemQuantity" required>
+                <h2>Adicionar Item ao Estoque</h2>
 
-                    <label for="itemType">Tipo
-                    <select id="itemType" name="type">
-                        <option value="tijolo">Blocos</option>
-                        <option value="tijolo">Areia</option>
-                        <option value="tijolo">Pedra</option>
-                        <option value="tijolo">Cimento</option>
-                        <option value="tijolo">Ferragens</option>
-                        <option value="tijolo">Madeiras</option>
-                        <option value="tijolo">Outros</option>
-                    </select>
+                <div>
+                    <form id="stockForm">
+                        <label for="itemName">Nome do Item:</label>
+                        <input type="text" id="itemName" required> 
 
-                    </label>
+                        <label for="itemQuantity">Quantidade:</label>
+                        <input type="number" id="itemQuantity" required>
 
-                    <button type="button" onclick="addItem()">Adicionar Item</button>
-                </form>
+                        <label for="itemUnd"></label>
+                        <select id="itemUnd" name="und">
+                            <option value="und">und</option>
+                            <option value="m">m</option>
+                            <option value="m²">m²</option>
+                            <option value="m³">m³</option>
+                            <option value="kg">kg</option>
+                        </select>
+
+                        <label for="itemType">Tipo
+                        <select id="itemType" name="type">
+                            <option value="bloco">Blocos</option>
+                            <option value="areia">Areia</option>
+                            <option value="pedra">Pedra</option>
+                            <option value="cimento">Cimento</option>
+                            <option value="ferragens">Ferragens</option>
+                            <option value="madeiras">Madeiras</option>
+                            <option value="outros">Outros</option>
+                        </select>
+
+                        </label>
+
+                        <button type="button" onclick="addItem()">Adicionar Item</button>
+                    </form>
+                </div>
             </div>
         
-            <h2>Itens no Estoque</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome do Item</th>
-                        <th>Quantidade</th>
-                        <th>Tipo</th>
-                    </tr>
-                </thead>
+            <div>
+                <h2>Itens no Estoque</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do Item</th>
+                            <th>Quantidade</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
 
-                <tbody id="stockList">
-                </tbody>
-            </table>
+                    <tbody id="stockList">
+                    </tbody>
+                </table>
+            </div>
 
-        </div>
-    
+        </div> 
     </div>
 
     <script src = "../scripts/estoque.js"></script>
+
 </body>
 
 </html>

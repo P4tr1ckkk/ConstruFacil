@@ -3,12 +3,12 @@
 /* Estilo para a barra lateral */
 .sidebar {
     top:0px;
-    height: 3100px;
+    height: 750px;
     width: 0%;
     position: absolute;
     z-index: 1;
     left: 0;
-    background-color: #2855e7;
+    background: linear-gradient(to top, rgb(62, 2, 102), blue);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 70px;
@@ -25,7 +25,7 @@
 
 /* Estilos CSS para os botões */
 .menu-button {
-    background-color: #2855e7;
+    background-color: blue;
     margin-top: 10px;
     border: none;
     color: white;
@@ -40,7 +40,7 @@
 }
 
 .menu-button:hover{
-    background-color: #1a3591;
+    background-color: rgb(22, 63, 241);
 }
 
 /* Estilo adicional para os botões de menu */
@@ -158,4 +158,63 @@ th {
     transition: margin-left 0.5s;
     flex: 1;
     padding: 20px;
+}
+
+/* Estilos para o ícone da calculadora */
+.calculator-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #337ab7;
+    color: #fff;
+    border: 1px solid #337ab7;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* Estilos para a calculadora */
+*{
+    margin: 0;
+    padding: 0;
+}
+.fundo{
+    background-image: linear-gradient(45deg,black, crimson);
+    height: 100vh;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.calculadora{
+    position: fixed;
+    top: 415px;
+    left: 1170px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+}
+.botao{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31,31,31);
+    border: none;
+    color: #fff;
+}
+.botao:hover{
+    background-color: black;
+}
+#resultado{
+    background-color: white;
+    width: 207px;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+    padding: 1px;
 }

@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function addItem() {
     var itemName = document.getElementById("itemName").value;
     var itemQuantity = parseInt(document.getElementById("itemQuantity").value);
-    var itemTypeSelect = document.getElementById("itemType").value;
-    var itemType = itemTypeSelect.options[itemTypeSelect.selectedIndex].value;
+    var itemUnd = document.getElementById("itemUnd").value;
+    var itemType = document.getElementById("itemType").value;
 
 
 
-    if (itemName.trim() === "" || isNaN(itemQuantity) || itemQuantity <= 0 || itemType === "") {
+    if (itemName.trim() === "" || isNaN(itemQuantity) || itemQuantity <= 0 || itemUnd === "" || itemType === "") {
         alert("Por favor, insira um nome e uma quantidade válida.");
         return;
     }
@@ -44,12 +44,12 @@ function addItem() {
     var cell3 = newRow.insertCell(2);
 
     cell1.innerHTML = itemName;
-    cell2.innerHTML = itemQuantity;
+    cell2.innerHTML = itemQuantity + ' ' + itemUnd;
     cell3.innerHTML = itemType;
 
     document.getElementById("itemName").value = "";
     document.getElementById("itemQuantity").value = "";
-    itemTypeSelect.selectedIndex = 0; // Reinicia a caixa de seleção para a opção padrão
+    itemType.selectedIndex = 0; // Reinicia a caixa de seleção para a opção padrão
 
 }
 
@@ -63,5 +63,33 @@ function toggleSidebar() {
     } else {
         sidebar.style.width = "0px";
         content.style.marginLeft = "70px";
+    }
+}
+
+//Calculadora
+function insert(num)
+{
+    var numero = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = numero + num;
+}
+function clean()
+{
+    document.getElementById('resultado').innerHTML = "";
+}
+function back()
+{
+    var resultado = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+}
+function calcular()
+{
+    var resultado = document.getElementById('resultado').innerHTML;
+    if(resultado)
+    {
+        document.getElementById('resultado').innerHTML = eval(resultado);
+    }
+    else
+    {
+        document.getElementById('resultado').innerHTML = "Nada..."
     }
 }

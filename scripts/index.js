@@ -1,40 +1,27 @@
-//calculadora de rodapé
-const calculatorIcon = document.getElementById("calculatorIcon");
-        const calculator = document.getElementById("calculator");
-        const closeCalculator = document.getElementById("closeCalculator");
-
-        calculatorIcon.addEventListener("click", () => {
-            calculator.style.display = "block";
-        });
-
-        closeCalculator.addEventListener("click", () => {
-            calculator.style.display = "none";
-        });
-
-        let display = document.getElementById("display");
-
-        function appendToDisplay(value) {
-            display.value += value;
-        }
-
-        function clearDisplay() {
-            display.value = "";
-        }
-
-        function calculateResult() {
-            try {
-                display.value = eval(display.value);
-            } catch (error) {
-                display.value = "Erro";
-            }
-        }
-
-         // Manipuladores de eventos para teclado
-         document.addEventListener("keydown", function(event) {
-            if (event.key.match(/[0-9.+\-*/()=]|Backspace/)) {
-                if (event.key === "Enter") {
-                    event.key = "="; // Mapeia Enter para o botão de igual (=)
-                }
-                appendToDisplay(event.key);
-            }
-        });
+//Calculadora
+function insert(num)
+{
+    var numero = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = numero + num;
+}
+function clean()
+{
+    document.getElementById('resultado').innerHTML = "";
+}
+function back()
+{
+    var resultado = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+}
+function calcular()
+{
+    var resultado = document.getElementById('resultado').innerHTML;
+    if(resultado)
+    {
+        document.getElementById('resultado').innerHTML = eval(resultado);
+    }
+    else
+    {
+        document.getElementById('resultado').innerHTML = "Nada..."
+    }
+}

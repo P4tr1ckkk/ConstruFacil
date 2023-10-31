@@ -19,7 +19,6 @@
 
         <div class="Links">
             <a href="login.html">Login</a>
-            <a href="cadastro.html">Cadastro</a>
             <a href="estoque.html">Estoque</a>
             <a href="obra.html">Planejamento</a>
         </div>
@@ -27,7 +26,7 @@
         <!--a href="login.html">
             <button class="login-btn">Login</button>
         </a-->
-        <a href="">
+        <a href="login.html">
             <img src="https://avatars.githubusercontent.com/u/80594518?v=4" class="foto-perfil">
         <!--a href="login.html">
             Mudar p/ foto de perfil do usuário
@@ -40,49 +39,49 @@
         <p>Aqui você pode controlar o estoque de materiais de construção civil, adicionar produtos, gerenciar fornecedores e muito mais.</p>
     </section>
 
-
     <div class="calculator-icon" id="calculatorIcon">Calcular</div>
     <div class="calculator" id="calculator">
         <div class="calculator-header">
             <h3>Calculadora</h3>
             <span id="closeCalculator" style="float: right; cursor: pointer;">Fechar</span>
         </div>
-        <div class="calculator-body">
-            <input type="text" id="display" readonly>
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <p id="resultado"></p>
             <table>
                 <tr>
-                    <td><button onclick="appendToDisplay('7')">7</button></td>
-                    <td><button onclick="appendToDisplay('8')">8</button></td>
-                    <td><button onclick="appendToDisplay('9')">9</button></td>
-                    <td><button onclick="clearDisplay()">C</button></td>
+                    <td><button class="botao" onclick="clean()">C</button></td>
+                    <td><button class="botao" onclick="back()"></button></td>
+                    <td><button class="botao" onclick="insert('/')">/</button></td>
+                    <td><button class="botao" onclick="insert('*')">X</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="appendToDisplay('4')">4</button></td>
-                    <td><button onclick="appendToDisplay('5')">5</button></td>
-                    <td><button onclick="appendToDisplay('6')">6</button></td>
-                    <td><button onclick="appendToDisplay('+')">+</button></td>
+                    <td><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button class="botao" onclick="insert('8')">8</button></td>
+                    <td><button class="botao" onclick="insert('9')">9</button></td>
+                    <td><button class="botao" onclick="insert('-')">-</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="appendToDisplay('1')">1</button></td>
-                    <td><button onclick="appendToDisplay('2')">2</button></td>
-                    <td><button onclick="appendToDisplay('3')">3</button></td>
-                    <td><button onclick="appendToDisplay('-')">-</button></td>
+                    <td><button class="botao" onclick="insert('4')">4</button></td>
+                    <td><button class="botao" onclick="insert('5')">5</button></td>
+                    <td><button class="botao" onclick="insert('6')">6</button></td>
+                    <td><button class="botao" onclick="insert('+')">+</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="appendToDisplay('0')">0</button></td>
-                    <td><button onclick="appendToDisplay('.')">.</button></td>
-                    <td><button onclick="calculateResult()">=</button></td>
-                    <td><button onclick="appendToDisplay('*')">*</button></td>
+                    <td><button class="botao" onclick="insert('1')">1</button></td>
+                    <td><button class="botao" onclick="insert('2')">2</button></td>
+                    <td><button class="botao" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
                 </tr>
                 <tr>
-                    <td><button onclick="appendToDisplay('/')">/</button></td>
-                    <td><button onclick="appendToDisplay('(')">(</button></td>
-                    <td><button onclick="appendToDisplay(')')">)</button></td>
+                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+                    <td><button class="botao" onclick="insert('.')">.</button></td>
                 </tr>
             </table>
         </div>
     </div>
 
+    
     <script src = "../scripts/index.js"></script>
 
 </body>
