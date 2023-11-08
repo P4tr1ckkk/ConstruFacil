@@ -4,10 +4,22 @@
 	box-sizing: border-box;
 }
 
+
+h3{
+	margin-top:-10px;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(to top, rgb(62, 2, 102), blue);
+	background-image: url(https://www.cimentoitambe.com.br/wp-content/uploads/2020/01/construc%CC%A7a%CC%83ocivil_2020.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	backdrop-filter: blur(5px); /* Ajuste o valor do desfoque conforme necessário */
+	-webkit-backdrop-filter: blur(1px); /* Para compatibilidade com navegadores da Webkit (como o Safari) */
 }
 
 .forms-section {
@@ -66,7 +78,7 @@ body {
 	font-family: inherit;
 	font-size: 16px;
 	letter-spacing: .5px;
-	color: #999;
+	color: white;
 	background-color: transparent;
 	border: none;
 	outline: none;
@@ -270,17 +282,3 @@ body {
 	transition: all .4s ease-in;
 }
 
-.btn-login {
-	color: #fbfdff;
-	background: #a7e245;
-	transform: translateX(-30%);
-	cursor: pointer;
-}
-
-.btn-signup {
-	color: #a7e245;
-	background: #fbfdff;
-	box-shadow: inset 0 0 0 2px #a7e245;
-	transform: translateX(30%);
-	cursor: pointer;
-}

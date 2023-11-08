@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <link rel="stylesheet" href="..\estilos\comum.css">
-    <link rel="stylesheet" href="..\estilos\index.css">
-     <link rel="stylesheet" href="..\estilos\comum.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construfacil</title>
-    <script src="https://kit.fontawesome.com/23fd127124.js" crossorigin="anonymous"></script>
+    <title>Slider</title>
+    <link rel="stylesheet" href="../estilos/css/style.css"> 
+    <link rel="stylesheet" href="../estilos/comum.css">
+
 </head>
 
-
 <body>
+
     <header class="nav">
         <a href="index.html">
             <h1>Construfácil</h1>
         </a>
 
-        <div class="Links">
-            <a href="login.html">Login</a>
-            <a href="estoque.html">Estoque</a>
-            <a href="obra.html">Planejamento</a>
-        </div>
-
         <!--a href="login.html">
             <button class="login-btn">Login</button>
         </a-->
-        <a href="login.html">
+        <a href="">
             <img src="https://avatars.githubusercontent.com/u/80594518?v=4" class="foto-perfil">
         <!--a href="login.html">
             Mudar p/ foto de perfil do usuário
@@ -34,55 +28,109 @@
         </a>
     </header>
 
-    <section id="welcome">
-        <h2>Bem-vindo à nossa plataforma de gestão de estoque</h2>
-        <p>Aqui você pode controlar o estoque de materiais de construção civil, adicionar produtos, gerenciar fornecedores e muito mais.</p>
-    </section>
+    <div class="app">
 
-    <div class="calculator-icon" id="calculatorIcon">Calcular</div>
-    <div class="calculator" id="calculator">
-        <div class="calculator-header">
-            <h3>Calculadora</h3>
-            <span id="closeCalculator" style="float: right; cursor: pointer;">Fechar</span>
+        <div class="cardList">
+            <button class="cardList__btn btn btn--left">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </div>
+            </button>
+
+            <div class="cards__wrapper">
+                <div class="card current--card">
+                    <div class="card__image">
+                        <img src="../assets/images/cap.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="card next--card">
+                    <div class="card__image">
+                        <img src="../assets/images/Tijolo.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="card previous--card">
+                    <div class="card__image">
+                        <img src="../assets/images/eng.png" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <button class="cardList__btn btn btn--right">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </button>
         </div>
-        <div class="calculadora">
-            <h1>Calculadora</h1>
-            <p id="resultado"></p>
-            <table>
-                <tr>
-                    <td><button class="botao" onclick="clean()">C</button></td>
-                    <td><button class="botao" onclick="back()"></button></td>
-                    <td><button class="botao" onclick="insert('/')">/</button></td>
-                    <td><button class="botao" onclick="insert('*')">X</button></td>
-                </tr>
-                <tr>
-                    <td><button class="botao" onclick="insert('7')">7</button></td>
-                    <td><button class="botao" onclick="insert('8')">8</button></td>
-                    <td><button class="botao" onclick="insert('9')">9</button></td>
-                    <td><button class="botao" onclick="insert('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="botao" onclick="insert('4')">4</button></td>
-                    <td><button class="botao" onclick="insert('5')">5</button></td>
-                    <td><button class="botao" onclick="insert('6')">6</button></td>
-                    <td><button class="botao" onclick="insert('+')">+</button></td>
-                </tr>
-                <tr>
-                    <td><button class="botao" onclick="insert('1')">1</button></td>
-                    <td><button class="botao" onclick="insert('2')">2</button></td>
-                    <td><button class="botao" onclick="insert('3')">3</button></td>
-                    <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
-                    <td><button class="botao" onclick="insert('.')">.</button></td>
-                </tr>
-            </table>
+
+        <div class="infoList">
+            <div class="info__wrapper">
+                <div class="info current--info">
+                    <h1 class="text name">Construfácil</h1>
+                    <h4 class="text location"></h4>
+                    <p class="text description">Sistema de gestão de construção civil</p>
+                </div>
+
+                <div class="info next--info">
+                    <h1 class="text name">Estoque de materiais</h1>
+                    <h4 class="text location"></h4>
+                    <p class="text description">Gerencie e administre os recursos da sua obra</p>
+                </div>
+
+                <div class="info previous--info">
+                    <h1 class="text name">Objeitvo</h1>
+                    <h4 class="text location"></h4>
+                    <p class="text description">Queremos trazer uma visão mais clara de seus projetos civis</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="app__bg">
+            <div class="app__bg__image current--image">
+                <img src="../assets/images/cap.png" alt="" />
+            </div>
+            <div class="app__bg__image next--image">
+                <img src="../assets/images/Tijolo.png" alt="" />
+            </div>
+            <div class="app__bg__image previous--image">
+                <img src="../assets/images/eng.png" alt="" />
+            </div>
         </div>
     </div>
 
-    
-    <script src = "../scripts/index.js"></script>
+    <div class="loading__wrapper">
+        <div class="loader--text">Loading...</div>
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
 
+
+    <svg class="icons" style="display: none;">
+        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='328 112 184 256 328 400'
+                style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='184 112 328 256 184 400'
+                style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+    </svg>
+
+    <div class="btn-start">
+        <a href="../html/login.html" class="btn-start">Começar</a>
+    </div>
+
+    <script src="../scripts/js/imagesLoaded.pkgd.min.js"></script>
+    <script src="../scripts/js/softripple.min.js"></script>
+    <script src="../scripts/js/gsap.min.js"></script>
+    <script src="../scripts/js/script.js"></script>
 </body>
+
 </html>

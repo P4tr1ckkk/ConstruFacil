@@ -77,11 +77,10 @@
 
         </div>
 
-        <!--a
+        <!--
         <div class="calculator-icon" id="calculatorIcon">Calcular</div>
         <div class="calculator" id="calculator">
             <div class="calculator-header">
-                <h3>Calculadora</h3>
                 <span id="closeCalculator">Fechar</span>
             </div>
             <div class="calculadora">
@@ -121,6 +120,7 @@
         </div>
         -->
         
+        
             <!--a conteúdo da página-->
         <div class="content" id="mainContent">
 
@@ -128,7 +128,7 @@
 
                 <h2>Adicionar Item ao Estoque</h2>
 
-                <div>
+                <div class="input">
                     <form id="stockForm">
                         <label for="itemName">Nome do Item:</label>
                         <input type="text" id="itemName" required> 
@@ -158,7 +158,7 @@
 
                         </label>
 
-                        <button type="button" onclick="addItem()">Adicionar Item</button>
+                        <button id="add"type="button" onclick="addItem()">Adicionar Item</button>
                     </form>
                 </div>
             </div>
